@@ -1,0 +1,10 @@
+.element {
+    color: #800000;
+    font-size: 18;
+    font-weight: 500;
+    border-bottom:2px solid transparent;
+}
+
+.active {
+    border-bottom:2px solid #800000;
+}
