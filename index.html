@@ -15,49 +15,61 @@
 
 
 </head>
-  <body>
+  <body id="vantajs">
         
 
         
-    <!-- <div id="#waves"/> -->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background: transparent; display: flex;">
+  
+    
+        <a class="navbar-brand" href="#">Imad<span style="font-size: 30px; color: blue;">.</span></a>
+            
+      
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link waves-effect waves-light" href="#home"><i class="fa fa-home" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="#projects"><i class="fa fa-magic" aria-hidden="true"></i> Projects</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-id-badge" aria-hidden="true"></i> Contact</a>
+                  </li>
+                  
+              </ul>
+          </div>
+
+          <script>
+            $('#navId a').click(e => {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+          </script>
+
+      </nav>
     
 
-    <div class="container">
+    <div class="container" style="margin-top: 2px;">
         <div class="row">
             <div class="col-12">
-                
-                <!-- Nav tabs -->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light lower-shadow">
-                    
-                    <a href="#home" class="nav-link active element"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-
-                    <a href="#projects" class="nav-link element"><i class="fa fa-magic" aria-hidden="true"></i> Projects</a>
-                 
-                    <a href="#about" class="nav-link"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
-               
-                    <a href="#contact" class="nav-link"><i class="fa fa-id-badge" aria-hidden="true"></i> Contact</a>
-                
-                </nav>
-                
-                <script>
-                    $('#navId a').click(e => {
-                        e.preventDefault();
-                        $(this).tab('show');
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12" >
                 <div class="vanta-container" id="vantajs">
-                    <div style="display: inline-block">
-                        <h3 class="display-3">Hey! Thanks for stopping by.</h3>
-                    </div>
+                        <p class="banner-text">
+                            <span class="word wisteria">Hi. Thanks for stopping by!.</span>
+                            <span class="word belize">I'm Imad</span>
+                            <span class="word pomegranate">I'm a full-stack app developer</span>
+                            <span class="word green">While you're here, feel free to check out some of my projects</span>
+                        </p>
+                    <!-- <h3 class="display-3">Hey! Thanks for stopping by.</h3> -->
                 </div>
-                
             </div>    
         </div>
     </div>
@@ -66,8 +78,10 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
-    <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
-    <script> (VANTA.WAVES('#vantajs')) </script>
+    <!-- <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script> -->
+    <script src="./vanta.min.js"></script>
+    <script> (VANTA.NET('#vantajs')) </script>
+    <script src="./words.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
