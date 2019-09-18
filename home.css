@@ -1,0 +1,62 @@
+:root {
+    --circle-width: 75px;
+    --circle-height: 75px;
+    --circle-radius: 37.5px;
+}
+
+.banner-text-container {
+    -webkit-box-shadow: -4px 0px 5px 0px rgba(11,78,212,1);
+    -moz-box-shadow: -4px 0px 5px 0px rgba(11,78,212,1);
+    box-shadow: -4px 0px 0px 0px rgba(11,78,212,1);
+    padding-left: 20px;
+    /* padding: 10px */
+}
+
+.banner-text-container p {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.banner-text-container h3 {
+    font-weight: 100;
+    font-size: 28px;
+    color: green;
+}
+
+.banner-text-container button {
+    border: 2px solid white
+}
+
+
+.circle {
+    width: var(--circle-width);
+    height: var(--circle-height);
+    border-radius: var(--circle-radius);
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(11,78,212,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(11,78,212,1); 
+    box-shadow: 0px 0px 7px 1px rgba(11,78,212,1)
+}
+
+.line {
+    border: 1px solid rgba(11,78,212,1);
+    width: 100%;
+    height: 0px;
+    /* margin: auto; */
+    /* margin-right: 5%; */
+    /* margin-left: 5%; */
+}
+
+.diag-up {
+    transform:rotate(340deg);
+}
+
+.diag-down {
+    transform:rotate(20deg);
+}
+
+
+
+
+
+

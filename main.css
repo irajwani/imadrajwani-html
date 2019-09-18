@@ -1,18 +1,38 @@
+:root {
+    --blue: rgba(11,78,212,1);
+    --section-height: 40rem; 
+}
+
 nav {
     -webkit-box-shadow: 0px 2px 10px 0px rgba(11,78,212,1);
 -moz-box-shadow: 0px 2px 10px 0px rgba(11,78,212,1);
-box-shadow: 0px 2px 10px 0px rgba(11,78,212,1);
+box-shadow: 0px 2px 10px 0px var(--blue);
 
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
-/* 
+
 body {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-}  */
+  /* font-weight: 600; */
+  /* font-size: 40px; */
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+}
+
+h3 {
+  font-size: 35px;
+  color: white;
+}
+
+.section {
+  height: var(--section-height)
+}
 
 .banner-text {
   font-family: 'Open Sans', sans-serif;
@@ -36,7 +56,7 @@ body {
   margin: 0;
 } */
 
-.word {
+/* .word {
   position: absolute;
   width: 220px;
   opacity: 0;
@@ -45,7 +65,7 @@ body {
 .letter {
   display: inline-block;
   position: relative;
-  /* float: left; */
+  float: left;
   transform: translateZ(25px);
   transform-origin: 50% 50% 25px;
 }
@@ -82,7 +102,7 @@ body {
 
 .midnight {
   color: #2c3e50;
-}
+} */
 
 
 /* html, body {
