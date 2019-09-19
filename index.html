@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./colors.css"/>
 
     <link rel="stylesheet" href="./home.css"/>
+    <link rel="stylesheet" href="./projects.css"/>
 
 
 </head>
@@ -26,7 +27,7 @@
     <nav class="container navbar navbar-expand-sm navbar-dark" style="background: transparent; display: flex;">
   
     
-        <a class="navbar-brand" href="#">Imad<span style="font-size: 30px; color: blue;">.</span></a>
+        <a class="navbar-brand" style="font-size: 35px;" href="#">Imad<span style="font-size: 40px; color: #b1aab3;">.</span></a>
             
       
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,13 +69,13 @@
     <!--  Left hand block with introduction -->
     <section id="home" class="container" style="margin-top: 5px">
         <div class="row">
-            <div class="col-md-5 d-flex flex-column justify-content-center align-items-center" style="height: 200px">
+            <div class="col-md-5 d-flex flex-column justify-content-center align-items-center" style="height: 200px;">
                 <div class="banner-text-container d-flex flex-column">
                         <p>Hello, welcome to my web portfolio!</p>
                         <!-- <p>I'm a <span>Full Stack App Developer</span> </p> -->
                         <p>Feel free to peruse my projects.</p>
 
-                        <button type="button" class="btn btn-outline-dark"><span style="color: white">Download CV</span></button>
+                        <button type="button" class="btn btn-outline-primary download-btn"><span>Download CV</span></button>
                         
                                                 <!-- <p class="banner-text">
                             <span class="word wisteria">Hi. Thanks for stopping by!.</span>
@@ -90,7 +91,7 @@
         <div class="row d-flex flex-row justify-content-center align-items-center" style="height: 315px">
           <div class="col-1 ">
             
-            <div class="circle">
+            <div class="circle" data-toggle="tooltip" data-placement="right" title="Beaconhouse School System">
               <!-- <img src="https://picsum.photos/200" style="width: 50px; height: 50px;"/> -->
             </div>
           </div>
@@ -101,8 +102,8 @@
 
           <div class="col-1 ">
             
-            <div class="circle">
-              <!-- <img src="https://picsum.photos/200" style="width: 50px; height: 50px;"/> -->
+            <div class="circle" data-toggle="tooltip" data-placement="right" title="Nixor">
+              
             </div>
           </div>
 
@@ -110,10 +111,10 @@
             <div class="line"></div>
           </div>
 
-          <div class="col-1 ">
+          <div class="col-1" data-toggle="tooltip" data-placement="right" title="Bates College">
             
             <div class="circle">
-              <!-- <img src="https://picsum.photos/200" style="width: 50px; height: 50px;"/> -->
+              
             </div>
           </div>
 
@@ -137,6 +138,55 @@
 
       </section>
 
+      <section id="projects" class="container" style="margin-top: 70px;">
+        <div class="row">
+          <div class="col-2">
+              <div class="btn-group-vertical">
+                  <button type="button" class="btn btn-outline-light">NottMyStyle</button>
+                  <button type="button" class="btn btn-outline-light">BrandedOnline</button>
+                  <button type="button" class="btn btn-outline-light">Looking Glass Investments</button>
+                  <button type="button" class="btn btn-outline-light">EducateMaine</button>
+                  <button type="button" class="btn btn-outline-light">The Bates Student</button>
+                  <button type="button" class="btn btn-outline-light">Math Thesis: Cryptanalysis</button>
+                  <button type="button" class="btn btn-outline-light">Economics Project: Crude oil prices</button>
+                  <button type="button" class="btn btn-outline-light">Physics Project: Black Scholes Model</button>
+              </div>
+          </div>
+
+          <div class="col-9">
+            <div class="project-container">
+                pppppp
+            </div>
+            
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="contact" class="container" style="margin-top: 70px;">
+        <div class="row">
+            <form class="col-12">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="Jane Doe">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="password" class="form-control" id="subject-input" placeholder="How's it going?">
+              </div>
+
+              <div>
+                  <label htmlFor="contactMessage">Message <span className="required">*</span></label>
+                  <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" onChange={(e)=>this.handleChange(e, 'body')}></textarea>
+               </div>
+              
+              <button type="button" class="btn btn-outline-primary download-btn"><span>Submit</span></button>
+
+            </form>
+        </div>
+      </section>
+
 
 
     
@@ -147,12 +197,18 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
-    <!-- <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script> -->
-    <script src="./vanta.min.js"></script>
-    <script> (VANTA.NET('#vantajs')) </script>
+    <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
+    <!-- <script src="./vanta.net.min.js"></script> -->
+    <!-- <script src="./vanta.cells.min.js"></script> -->
+    <script> (VANTA.WAVES('#vantajs')) </script>
     <script src="./words.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    </script>
   </body>
 </html>
