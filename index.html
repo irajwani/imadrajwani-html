@@ -16,6 +16,19 @@
 
     <link rel="stylesheet" href="./home.css"/>
     <link rel="stylesheet" href="./projects.css"/>
+    <style>
+    nav {
+        -webkit-box-shadow: 0px 2px 10px 0px #fff;
+        -moz-box-shadow: 0px 2px 10px 0px rgba(11,78,212,1);
+        box-shadow: 0px 2px 10px 0px var(--white);
+        background: transparent;
+    }
+
+    nav.scrolled {
+      background: rgb(2,0,36);
+      background: linear-gradient(320deg, rgba(2,0,36,1) 24%, rgba(15,15,164,1) 82%, rgba(46,117,131,1) 100%);
+    }
+    </style>
 
 
 </head>
@@ -24,7 +37,7 @@
         
 
     <!-- Navigation Bar (maybe needs to be wrapped in .container -->
-    <nav class="container navbar navbar-expand-sm navbar-dark" style="background: transparent; display: flex;">
+    <nav class="container navbar sticky-top navbar-expand-sm navbar-dark" style="display: flex;">
   
     
         <a class="navbar-brand" style="font-size: 35px;" href="#">Imad<span style="font-size: 40px; color: #b1aab3;">.</span></a>
@@ -43,15 +56,15 @@
                       <a class="nav-link waves-effect waves-light" href="#projects"><i class="fa fa-magic" aria-hidden="true"></i> Projects</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+                      <a class="nav-link waves-effect waves-light" href="#about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-id-badge" aria-hidden="true"></i> Contact</a>
+                    <a class="nav-link waves-effect waves-light" href="#contact"><i class="fa fa-id-badge" aria-hidden="true"></i> Contact</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-github-alt" aria-hidden="true"></i>  Git</a>
+                    <a class="nav-link waves-effect waves-light" href="https://github.com/irajwani"><i class="fa fa-github-alt" aria-hidden="true"></i>  Git</a>
                   </li>
                   
               </ul>
@@ -69,7 +82,7 @@
     <!--  Left hand block with introduction -->
     <section id="home" class="container" style="margin-top: 5px">
         <div class="row">
-            <div class="col-md-5 d-flex flex-column justify-content-center align-items-center" style="height: 200px;">
+            <div class="col-md-7 d-flex flex-column justify-content-center align-items-center" style="height: 350px;">
                 <div class="banner-text-container d-flex flex-column">
                         <p>Hello, welcome to my web portfolio!</p>
                         <!-- <p>I'm a <span>Full Stack App Developer</span> </p> -->
@@ -85,7 +98,12 @@
                         </p> -->
                     <!-- <h3 class="display-3">Hey! Thanks for stopping by.</h3> -->
                 </div>
-            </div>    
+            </div>
+            
+            <div class="col-md-5 distorted-object">
+
+            </div>
+
         </div>
 
         <div class="row d-flex flex-row justify-content-center align-items-center" style="height: 315px">
@@ -146,10 +164,11 @@
                   <button type="button" class="btn btn-outline-light">BrandedOnline</button>
                   <button type="button" class="btn btn-outline-light">Looking Glass Investments</button>
                   <button type="button" class="btn btn-outline-light">EducateMaine</button>
-                  <button type="button" class="btn btn-outline-light">The Bates Student</button>
+                  <button type="button" class="btn btn-outline-light">Bates College</button>
+                  <!-- <button type="button" class="btn btn-outline-light">The Bates Student</button>
                   <button type="button" class="btn btn-outline-light">Math Thesis: Cryptanalysis</button>
                   <button type="button" class="btn btn-outline-light">Economics Project: Crude oil prices</button>
-                  <button type="button" class="btn btn-outline-light">Physics Project: Black Scholes Model</button>
+                  <button type="button" class="btn btn-outline-light">Physics Project: Black Scholes Model</button> -->
               </div>
           </div>
 
@@ -164,21 +183,34 @@
 
       </section>
 
-      <section id="contact" class="container" style="margin-top: 70px;">
+      <section id="about" class="container">
+
         <div class="row">
-            <form class="col-12">
+
+          <div class="col-6">
+            
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="contact" class="container" style="margin-top: 70px; padding-bottom: 50px;">
+        <div class="row">
+            <form class="col-md-8">
               <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name" class="contact-label">Name</label>
                 <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="Jane Doe">
               </div>
+
               <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="password" class="form-control" id="subject-input" placeholder="How's it going?">
+                <label for="subject" class="contact-label">Subject</label>
+                <input type="text" class="form-control" id="subject-input" placeholder="How's it going?">
               </div>
 
-              <div>
-                  <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                  <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" onChange={(e)=>this.handleChange(e, 'body')}></textarea>
+              <div class="form-group">
+                  <label for="contactMessage" class="contact-label">Message <span className="required">*</span></label>
+                  <textarea cols="50" rows="5" class="form-control" id="contactMessage" name="contactMessage"></textarea>
                </div>
               
               <button type="button" class="btn btn-outline-primary download-btn"><span>Submit</span></button>
@@ -210,5 +242,13 @@
       $('[data-toggle="tooltip"]').tooltip()
     });
     </script>
+
+    <!-- Change color on scroll -->
+    <script>
+      $(window).scroll(function(){
+      $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+      });
+     </script>
+
   </body>
 </html>
